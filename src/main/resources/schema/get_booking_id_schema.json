@@ -1,0 +1,96 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://example.com/root.json",
+  "type": "object",
+  "title": "The Root Schema",
+  "required": [
+    "firstname",
+    "lastname",
+    "totalprice",
+    "depositpaid",
+    "bookingdates",
+    "additionalneeds"
+  ],
+  "properties": {
+    "firstname": {
+      "$id": "#/properties/firstname",
+      "type": "string",
+      "title": "The Firstname Schema",
+      "default": "",
+      "examples": [
+        "Sally"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "lastname": {
+      "$id": "#/properties/lastname",
+      "type": "string",
+      "title": "The Lastname Schema",
+      "default": "",
+      "examples": [
+        "Brown"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "totalprice": {
+      "$id": "#/properties/totalprice",
+      "type": "integer",
+      "title": "The Totalprice Schema",
+      "default": 0,
+      "examples": [
+        111
+      ]
+    },
+    "depositpaid": {
+      "$id": "#/properties/depositpaid",
+      "type": "boolean",
+      "title": "The Depositpaid Schema",
+      "default": false,
+      "examples": [
+        true
+      ]
+    },
+    "bookingdates": {
+      "$id": "#/properties/bookingdates",
+      "type": "object",
+      "title": "The Bookingdates Schema",
+      "required": [
+        "checkin",
+        "checkout"
+      ],
+      "properties": {
+        "checkin": {
+          "$id": "#/properties/bookingdates/properties/checkin",
+          "type": "string",
+          "title": "The Checkin Schema",
+          "default": "",
+          "examples": [
+            "2013-02-23"
+          ],
+          "pattern": "^(.*)$"
+        },
+        "checkout": {
+          "$id": "#/properties/bookingdates/properties/checkout",
+          "type": "string",
+          "title": "The Checkout Schema",
+          "default": "",
+          "examples": [
+            "2014-10-23"
+          ],
+          "pattern": "^(.*)$"
+        }
+      }
+    },
+    "additionalneeds": {
+      "$id": "#/properties/additionalneeds",
+      "type": "string",
+      "title": "The Additionalneeds Schema",
+      "default": "",
+      "examples": [
+        "Breakfast"
+      ],
+      "pattern": "^(.*)$"
+    }
+  }
+}

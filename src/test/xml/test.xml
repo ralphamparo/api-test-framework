@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="restful_booker_test">
+
+    <listeners>
+        <listener class-name="utils.reporting.TestListener"/>
+    </listeners>
+
+    <test name="restful-booker">
+        <classes>
+            <class name="tests.RestfulBookerTest"/>
+        </classes>
+    </test>
+
+    <!--If you need to add any more tests, follow the format below-->
+    <!--
+    <test name="restful-booker">
+        <classes>
+            <class name="<insert test here>"/>
+        </classes>
+    </test>
+    -->
+</suite>
