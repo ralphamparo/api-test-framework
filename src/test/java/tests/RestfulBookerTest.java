@@ -74,7 +74,7 @@ public class RestfulBookerTest extends TestConfig {
             priority = 4,
             description = "Get the newly created booking by using the bookingId as path parameter" +
                     "then check the response body against a schema to check that the JSON response is" +
-                    "structured well"
+                    "structured well."
     )
     public void getNewlyAddedBooking() {
         given()
@@ -86,6 +86,15 @@ public class RestfulBookerTest extends TestConfig {
                 .statusCode(200)
                 .body(matchesJsonSchema(new File(Resources.SCHEMA + "get_booking_id_schema.json")))
                 .log().all();
+
+        /*
+        * The JSON schema can be generated from https://jsonschema.net. Just paste in the expected JSON response
+        * and a schema will be generated for you. Then create a JSON file and paste in the schema into it then save
+        * the file inside the resources/schema directory. Now every time you get a JSON response,
+        * you can check it's structure against the schema you created to check if it conformed to the desired JSON schema
+        * */
+
+
     }
 
     @Test (
