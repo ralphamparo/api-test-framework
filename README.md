@@ -4,7 +4,6 @@ The tests are by no means comprehensive in that the project simply showcases how
 
 This project should be considered half-baked in that you are expected to extend and add your own features onto the framework depending on your testing needs.
 
-<br/>
 
 ##### Current Features:
 * Reporting configured as a test listener
