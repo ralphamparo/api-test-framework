@@ -10,7 +10,9 @@ import static org.hamcrest.Matchers.lessThanOrEqualTo;
 
 public class TestConfig {
 
-    @BeforeTest
+    @BeforeTest (
+            description = "This initializes the request and response specs and applies it to all your tests (global specs)"
+    )
     public void setup() {
         RestAssured.requestSpecification = new RequestSpecBuilder()
                 .addHeader("Content-Type", "application/json")
